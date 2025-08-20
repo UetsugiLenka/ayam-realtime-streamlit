@@ -23,5 +23,5 @@ Aplikasi ini sudah dideploy di **Streamlit Cloud** dan dapat diakses melalui lin
 
 ### 1. Clone repo
 ```bash
-git clone https://github.com/USERNAME/ayam-realtime-streamlit.git
+git clone https://github.com/UetsugiLenka/ayam-realtime-streamlit.git
 cd ayam-realtime-streamlit
