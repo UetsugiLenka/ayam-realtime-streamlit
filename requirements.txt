@@ -1,6 +1,6 @@
 streamlit==1.36.0
 streamlit-webrtc==0.47.7
-opencv-python-headless==4.10.0.84
-ultralytics==8.2.50
+opencv-python-headless==4.8.1.78
+ultralytics==8.0.196
 tensorflow-cpu==2.15.0
 huggingface_hub==0.23.0
