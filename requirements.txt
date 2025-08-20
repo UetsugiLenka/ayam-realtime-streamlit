@@ -1,6 +1,6 @@
 streamlit
 streamlit-webrtc
-opencv-python-headless
-ultralytics
-tensorflow
+opencv-python-headless==4.10.0.84
+ultralytics==8.2.50
+tensorflow==2.15.0
 huggingface_hub
