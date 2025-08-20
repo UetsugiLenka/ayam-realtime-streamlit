@@ -5,14 +5,20 @@ import streamlit as st
 from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
 from ultralytics import YOLO
 from tensorflow.keras.models import load_model
+from huggingface_hub import hf_hub_download
 
 st.set_page_config(page_title="Deteksi Ayam Real-time", layout="wide")
 
-# ========== Load Models ==========
+# ========== Download & Load Models ==========
 @st.cache_resource
 def load_models():
-    yolo = YOLO("yolo_chicken_parts.pt")   # model YOLO deteksi bagian ayam
-    freshness = load_model("mobilenetv3_freshness.keras")  # MobileNet klasifikasi kesegaran
+    # Download dari Hugging Face Hub
+    keras_path = hf_hub_download(repo_id="USERNAME/ayam-models", filename="mobilenetv3_freshness.keras")
+    yolo_path = hf_hub_download(repo_id="USERNAME/ayam-models", filename="yolo_chicken_parts.pt")
+
+    # Load model
+    yolo = YOLO(yolo_path)
+    freshness = load_model(keras_path)
     return yolo, freshness
 
 yolo_model, freshness_model = load_models()
