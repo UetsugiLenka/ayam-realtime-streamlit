@@ -1,6 +1,6 @@
-requirements.txt
 streamlit
 streamlit-webrtc
 opencv-python-headless
 ultralytics
 tensorflow
+huggingface_hub
